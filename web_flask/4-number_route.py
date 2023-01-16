@@ -1,16 +1,5 @@
 #!/usr/bin/python3
-"""Script that starts a Flask Web application
-
-The application listens on 0.0.0.0, port 5000.
-Routes:
-    /: Displays 'Hello HBNB!'.
-    /hbnb: Displays 'HBNB'.
-    /c/<text>: Displays 'C' followed by the value of <text>.
-    /python/(<text>): Displays 'Python' followed by the value of <text>.
-    /number/<n>: Displays 'n is a number' only if <n> is an integer
-"""
-
-
+"""Script that starts a Flask Web application"""
 from flask import Flask
 app = Flask(__name__)
 
@@ -43,7 +32,7 @@ def hello_python(text="is_cool"):
 @app.route('/number/<int:n>', strict_slashes=False)
 def hello_number(n):
     """Returns the string to display /number subpaths"""
-    return f"{n} is a number"
+    return "{} is a number".format(n)
 
 
 if __name__ == "__main__":
