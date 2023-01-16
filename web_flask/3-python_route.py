@@ -24,7 +24,7 @@ def hello_smthg(text):
 
 @app.route('/python', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
-def hello_python(text="is_fun"):
+def hello_python(text="is_cool"):
     """Returns the string to display /c subpaths"""
     return 'python ' + text.replace('_', ' ')
 
