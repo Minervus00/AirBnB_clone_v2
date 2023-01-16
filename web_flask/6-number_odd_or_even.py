@@ -32,7 +32,7 @@ def hello_python(text="is_cool"):
 @app.route('/number/<int:n>', strict_slashes=False)
 def hello_number(n):
     """Returns the string to display /number subpaths"""
-    return f"{n} is a number"
+    return "{} is a number".format(n)
 
 
 @app.route('/number_template/<int:n>', strict_slashes=False)
