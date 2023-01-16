@@ -26,7 +26,7 @@ def hello_smthg(text):
 @app.route('/python/<text>', strict_slashes=False)
 def hello_python(text="is_cool"):
     """Returns the string to display /python subpaths"""
-    return 'python ' + text.replace('_', ' ')
+    return 'Python ' + text.replace('_', ' ')
 
 
 @app.route('/number/<int:n>', strict_slashes=False)
